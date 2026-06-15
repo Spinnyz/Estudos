@@ -1,7 +1,6 @@
-genero = 'F'
+#Studing Def Functions:
 
-print(f"Your gender is: {genero}")
-print("Good morning")
+def soma (x,y):
+    print (x+y)
 
-
-
+soma (50,25)
