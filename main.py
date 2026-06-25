@@ -1,12 +1,9 @@
-def soma(*args):
-    total = 0
-    for i in args:
-        total +=i
-        print ("total:", i,total)
-    return total
+def saudacao(saudacao,nome):
+    def saudar():
+        return f"{saudacao} {nome}"
+    return saudar
+        
 
-
-valor = soma(1,2,3,4,5,6,7,8,9,10,11,12)
-print(valor)
-    
+s1 = saudacao("Bom dia","pedro")
+print (s1())
 
