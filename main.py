@@ -1,11 +1,40 @@
-pessoa= {
-    "nome": ["Carlos", "Ana", "Pedro", "Maria", "Lucas", "Julia", "Rafael", "Beatriz", "Gabriel", "Larissa"],
-    "sobrenome": ["Silva", "Santos", "Oliveira", "Souza", "Lima", "Pereira", "Costa", "Ferreira", "Almeida", "Ribeiro"],
-    "idade": [25, 30, 22, 28, 35, 19, 41, 27, 33, 24],
-    "cidade": ["São Paulo", "Rio de Janeiro", "Curitiba", "Belo Horizonte", "Salvador", "Fortaleza", "Brasília", "Recife", "Porto Alegre", "Manaus"]
+quiz= [
+    {
+    "pergunta": "1+1",
+    "resposta": [1,2,3,4],
+    "correta": 1,
+    },
     
-}
+    {
+    "pergunta": "10x20",
+    "resposta": [10,200,300,400],
+    "correta": 200,
+    },
+    
+    {
+    "pergunta": "10x40",
+    "resposta": [10,200,300,400],
+    "correta": 400,
+    }
 
-(pessoa.setdefault("carro", "Não informado"))
+]
+    
+    
+escolher = 0
 
+for i in quiz:
+    print (quiz[escolher]["pergunta"])
+    print (quiz[escolher]["resposta"])
 
+    user = input("RESPOSTA: ")
+
+    if user.isdigit():
+        if user != quiz[escolher]["correta"]:
+            print ("errado")
+    
+        else:
+            print ("correto")
+    else:
+        print ("Valor invalido, nao digite letras")
+
+    escolher +=1
