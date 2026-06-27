@@ -6,3 +6,6 @@ pessoa= {
     
 }
 
+(pessoa.setdefault("carro", "Não informado"))
+
+
