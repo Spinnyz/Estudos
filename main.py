@@ -1,40 +1,19 @@
-quiz= [
-    {
-    "pergunta": "1+1",
-    "resposta": [1,2,3,4],
-    "correta": 1,
-    },
-    
-    {
-    "pergunta": "10x20",
-    "resposta": [10,200,300,400],
-    "correta": 200,
-    },
-    
-    {
-    "pergunta": "10x40",
-    "resposta": [10,200,300,400],
-    "correta": 400,
-    }
+def executa (funcao, *args):
+    return funcao(*args)
 
-]
+def soma (x,y):
+        return x+y
     
+def criar_mult(multiplicador):
+        def multiplica(valor):
+            return valor*multiplicador
     
-escolher = 0
+        return multiplica
 
-for i in quiz:
-    print (quiz[escolher]["pergunta"])
-    print (quiz[escolher]["resposta"])
 
-    user = input("RESPOSTA: ")
-
-    if user.isdigit():
-        if user != quiz[escolher]["correta"]:
-            print ("errado")
-    
-        else:
-            print ("correto")
-    else:
-        print ("Valor invalido, nao digite letras")
-
-    escolher +=1
+print (
+    executa (
+        lambda multiplicador,valor : valor*multiplicador, 3,2
+    ),
+    executa (criar_mult(3),2)
+)
