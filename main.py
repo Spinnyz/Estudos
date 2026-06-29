@@ -1,16 +1,20 @@
-a,b = 1,2
-a,b = b,a
+produtos = [
+    {'nome':'Produto A', 'preco':10},
+    {'nome':'Produto B', 'preco':20},
+    {'nome':'Produto C', 'preco':30},
+]
 
 
-pessoa = {
-    "nome": "Pedro",
-    "sobrenome" : "Lucas",
+novos_produtos = [
+    {"nome":produto["nome"], 
+    "preco":produto["preco"]*2}
+    if produto["preco"] > 20 else {**produto}
+    for produto in produtos 
+        
+]
 
-}
 
 
-dados = {
-    "idade": 16,
-    "altura": 1.6,
-}
+
+print(novos_produtos)
 
